@@ -69,7 +69,7 @@ class Data extends AbstractData
      *
      * @return array|mixed|string
      */
-    public function getPassword($storeId = null, $decrypt = true)
+    public function getPassword($storeId = null, $decrypt = false)
     {
         if ($storeId || $storeId = $this->_request->getParam('store')) {
             $password = $this->getSmtpConfig('password', $storeId);
